@@ -11,24 +11,36 @@ import java.util.Date;
  * @author juancarloslizarragaencinas
  */
 public class Entrada {
-
-    public Producto producto;
+    
+    public int id;
+    public String producto;
     public int cantidad;
-    public Date fecha;
-    public Usuario responsable;
+    public String fecha;
+    public String proveedor;
 
-    public Entrada(Producto producto, int cantidad, Date fecha, Usuario responsable) {
+    public Entrada(int id, String producto, int cantidad, String fecha, String proveedor) {
+        this.id = id;
         this.producto = producto;
         this.cantidad = cantidad;
         this.fecha = fecha;
-        this.responsable = responsable;
+        this.proveedor = proveedor;
+    }
+public Entrada(){
+}
+
+    public int getId() {
+        return id;
     }
 
-    public Producto getProducto() {
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getProducto() {
         return producto;
     }
 
-    public void setProducto(Producto producto) {
+    public void setProducto(String producto) {
         this.producto = producto;
     }
 
@@ -40,24 +52,26 @@ public class Entrada {
         this.cantidad = cantidad;
     }
 
-    public Date getFecha() {
+    public String getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(String fecha) {
         this.fecha = fecha;
     }
 
-    public Usuario getResponsable() {
-        return responsable;
+    public String getProveedor() {
+        return proveedor;
     }
 
-    public void setResponsable(Usuario responsable) {
-        this.responsable = responsable;
+    public void setProveedor(String proveedor) {
+        this.proveedor = proveedor;
     }
 
 @Override
 public String toString() {
-return "producto"+producto+"cantidad"+cantidad+"fecha"+fecha+"responsable"+responsable;
+return "producto"+producto+"cantidad"+cantidad+"fecha"+fecha+"proveedor"+proveedor;
 }
+
+    
 }
