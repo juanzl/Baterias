@@ -16,6 +16,8 @@ public class Conexion {
 
     public static Connection con;
 
+    
+
     public Conexion() {
         try {
             Class.forName("com.mysql.cj.jdbc.Drive");
