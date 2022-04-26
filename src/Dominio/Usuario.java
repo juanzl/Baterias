@@ -6,21 +6,24 @@ package Dominio;
  */
 public class Usuario {
 
-    public tipoUsuario tipoUsuario;
+    public String tipoUsuario;
     public String nombre;
     public int id;
 
-    public Usuario(tipoUsuario tipoUsuario, String nombre, int id) {
+    public Usuario(String tipoUsuario, String nombre, int id) {
         this.tipoUsuario = tipoUsuario;
         this.nombre = nombre;
         this.id = id;
     }
+    public void Usuario(){
 
-    public tipoUsuario getTipoUsuario() {
+} 
+
+    public String getTipoUsuario() {
         return tipoUsuario;
     }
 
-    public void setTipoUsuario(tipoUsuario tipoUsuario) {
+    public void setTipoUsuario(String tipoUsuario) {
         this.tipoUsuario = tipoUsuario;
     }
 

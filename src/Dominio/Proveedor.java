@@ -5,7 +5,7 @@ package Dominio;
  *
  * @author juancarloslizarragaencinas
  */
-class Proveedor {
+public class Proveedor {
 
     public String nombre;
     public String direccion;
@@ -17,6 +17,10 @@ class Proveedor {
         this.direccion = direccion;
         this.ciudad = ciudad;
         this.telefono = telefono;
+    }
+
+    public Proveedor() {
+       
     }
 
     public String getNombre() {

@@ -213,6 +213,12 @@ public class frmEntradaProducto extends javax.swing.JFrame {
             }
         });
 
+        txtClave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtClaveActionPerformed(evt);
+            }
+        });
+
         txtID.setEnabled(false);
 
         btnBuscar.setText("BUSCAR");
@@ -396,10 +402,10 @@ public class frmEntradaProducto extends javax.swing.JFrame {
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
 //        Producto producto=new Producto();
-DefaultTableModel model = (DefaultTableModel)TableList.getModel();
-model.addRow(new Object[]{txtFecha.getText(), txtProducto.getText(),
-txtPrecio.getText(),txtMarca.getText(),txtClave.getText(),txtDescripcion.getText(),
-txtCantidad.getText(),txtProveedor.getText()});
+        DefaultTableModel model = (DefaultTableModel) TableList.getModel();
+        model.addRow(new Object[]{txtFecha.getText(), txtProducto.getText(),
+            txtPrecio.getText(), txtMarca.getText(), txtClave.getText(), txtDescripcion.getText(),
+            txtCantidad.getText(), txtProveedor.getText()});
 
 //        Connection con = null;
 //
@@ -586,6 +592,10 @@ Connection con = null;
 
 
     }//GEN-LAST:event_btnActualizarActionPerformed
+
+    private void txtClaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtClaveActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtClaveActionPerformed
     public void actualizarTabla() {
         while (modelo.getRowCount() > 0) {
             modelo.removeRow(0);

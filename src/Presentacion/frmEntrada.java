@@ -226,7 +226,7 @@ public class frmEntrada extends javax.swing.JFrame {
             }
         });
 
-        btnActualizar.setText("ACTUALIZAR");
+        btnActualizar.setText("AGREGAR");
         btnActualizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnActualizarActionPerformed(evt);
