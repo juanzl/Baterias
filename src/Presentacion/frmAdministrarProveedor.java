@@ -23,7 +23,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author juancarloslizarragaencinas
  */
-public class frmProveedor extends javax.swing.JFrame {
+public class frmAdministrarProveedor extends javax.swing.JFrame {
     public static final String URL = "jdbc:mysql://localhost:3306/Bateria";
     public static final String USERNAME = "root";
     public static final String PASSWORD = "Tenison10";
@@ -53,7 +53,7 @@ public class frmProveedor extends javax.swing.JFrame {
         }
         return con;
     }
-    public frmProveedor() {
+    public frmAdministrarProveedor() {
         initComponents();
         this.setLocationRelativeTo(null);
 
@@ -410,20 +410,21 @@ public class frmProveedor extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(frmProveedor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmAdministrarProveedor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(frmProveedor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmAdministrarProveedor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(frmProveedor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmAdministrarProveedor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(frmProveedor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmAdministrarProveedor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new frmProveedor().setVisible(true);
+                new frmAdministrarProveedor().setVisible(true);
             }
         });
     }

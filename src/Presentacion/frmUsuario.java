@@ -111,7 +111,7 @@ private void limpiarCajas() {
         jLabel1.setText("Nombre:");
 
         jLabel2.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
-        jLabel2.setText("Tipo:");
+        jLabel2.setText("Contraseña");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -182,7 +182,7 @@ private void limpiarCajas() {
                 {null, null}
             },
             new String [] {
-                "Nombre", "Tipo"
+                "Nombre", "Contraseña"
             }
         ) {
             Class[] types = new Class [] {

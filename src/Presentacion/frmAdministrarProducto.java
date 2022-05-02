@@ -23,7 +23,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author juancarloslizarragaencinas
  */
-public class frmEntradaProducto extends javax.swing.JFrame {
+public class frmAdministrarProducto extends javax.swing.JFrame {
 
     public static final String URL = "jdbc:mysql://localhost:3306/Bateria";
     public static final String USERNAME = "root";
@@ -80,7 +80,7 @@ public class frmEntradaProducto extends javax.swing.JFrame {
     /**
      * Creates new form frmEntradaProducto
      */
-    public frmEntradaProducto() {
+    public frmAdministrarProducto() {
         initComponents();
         this.setLocationRelativeTo(null);
         txtID.setVisible(false);
@@ -190,7 +190,7 @@ public class frmEntradaProducto extends javax.swing.JFrame {
         jLabel15.setFont(new java.awt.Font("sansserif", 1, 12)); // NOI18N
         jLabel15.setText("Proveedor:");
 
-        btnBorrar.setText("BORRAR");
+        btnBorrar.setText("ELIMINAR");
         btnBorrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBorrarActionPerformed(evt);
@@ -228,7 +228,7 @@ public class frmEntradaProducto extends javax.swing.JFrame {
             }
         });
 
-        btnActualizar.setText("ACTUALIZAR");
+        btnActualizar.setText("AGREGAR");
         btnActualizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnActualizarActionPerformed(evt);
@@ -675,20 +675,21 @@ Connection con = null;
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(frmEntradaProducto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmAdministrarProducto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(frmEntradaProducto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmAdministrarProducto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(frmEntradaProducto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmAdministrarProducto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(frmEntradaProducto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmAdministrarProducto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new frmEntradaProducto().setVisible(true);
+                new frmAdministrarProducto().setVisible(true);
             }
         });
     }
