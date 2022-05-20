@@ -62,7 +62,7 @@ public class frmAdministrarProducto extends javax.swing.JFrame {
         txtClave.setText(null);
         txtDescripcion.setText(null);
         txtCantidad.setText(null);
-        txtProveedor.setText(null);
+        
 
     }
 
@@ -124,12 +124,12 @@ public class frmAdministrarProducto extends javax.swing.JFrame {
         txtClave = new javax.swing.JTextField();
         txtDescripcion = new javax.swing.JTextField();
         txtCantidad = new javax.swing.JTextField();
-        txtProveedor = new javax.swing.JTextField();
         txtPrecio = new javax.swing.JTextField();
         txtID = new javax.swing.JTextField();
         btnBuscar = new javax.swing.JButton();
         btnActualizar = new javax.swing.JButton();
         btnSalir = new javax.swing.JButton();
+        ComboPro = new javax.swing.JComboBox<>();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -242,6 +242,13 @@ public class frmAdministrarProducto extends javax.swing.JFrame {
             }
         });
 
+        ComboPro.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "GONHEER", "LTH", "AUTOZONE", "ACDelco", "DURACELL" }));
+        ComboPro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ComboProActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -256,39 +263,42 @@ public class frmAdministrarProducto extends javax.swing.JFrame {
                             .addComponent(jLabel16))
                         .addGap(42, 42, 42)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtProveedor)
                             .addComponent(txtCantidad)
                             .addComponent(txtDescripcion)
                             .addComponent(txtClave)
                             .addComponent(txtMarca)
                             .addComponent(txtProducto, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(txtPrecio)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel12)
-                            .addComponent(jLabel13)
-                            .addComponent(jLabel14)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
                             .addComponent(jLabel15)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(250, 250, 250)
-                                .addComponent(txtID, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel9)
-                                .addGap(60, 60, 60)
-                                .addComponent(txtFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(35, 35, 35)
-                                .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(btnActualizar)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnEditar))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(btnGuardar)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnBorrar)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnSalir)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                            .addGap(35, 35, 35)
+                            .addComponent(ComboPro, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel12)
+                                .addComponent(jLabel13)
+                                .addComponent(jLabel14)
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addGap(250, 250, 250)
+                                    .addComponent(txtID, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addComponent(jLabel9)
+                                    .addGap(60, 60, 60)
+                                    .addComponent(txtFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(35, 35, 35)
+                                    .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addComponent(btnActualizar)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(btnEditar))
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addComponent(btnGuardar)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(btnBorrar)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(btnSalir)))
+                            .addGap(0, 0, Short.MAX_VALUE))))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -328,8 +338,8 @@ public class frmAdministrarProducto extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel15)
-                    .addComponent(txtProveedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, Short.MAX_VALUE)
+                    .addComponent(ComboPro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 24, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnGuardar)
                     .addComponent(btnBorrar)
@@ -345,7 +355,7 @@ public class frmAdministrarProducto extends javax.swing.JFrame {
         jLabel1.setText("LISTA DE PRODUCTOS");
 
         jLabel2.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
-        jLabel2.setText("ENTRADA DE PRODUCTOS");
+        jLabel2.setText("ADMINISTRAR PRODUCTO");
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Presentacion/Bateria.jpg"))); // NOI18N
 
@@ -405,7 +415,8 @@ public class frmAdministrarProducto extends javax.swing.JFrame {
         DefaultTableModel model = (DefaultTableModel) TableList.getModel();
         model.addRow(new Object[]{txtFecha.getText(), txtProducto.getText(),
             txtPrecio.getText(), txtMarca.getText(), txtClave.getText(), txtDescripcion.getText(),
-            txtCantidad.getText(), txtProveedor.getText()});
+            txtCantidad.getText(), ComboPro.getSelectedItem().toString()});
+
 
 //        Connection con = null;
 //
@@ -455,7 +466,7 @@ public class frmAdministrarProducto extends javax.swing.JFrame {
 
         try {
             con = getConnection();
-            ps = con.prepareStatement("DELETE FROM Entrada_Productos WHERE clave=? ");
+            ps = con.prepareStatement("DELETE FROM Administrar_Productos WHERE clave=? ");
             ps.setString(1, txtClave.getText());
             
 
@@ -484,7 +495,7 @@ Connection con = null;
 
         try {
             con = getConnection();
-            ps = con.prepareStatement("UPDATE Entrada_Productos SET fecha=?, producto=?, precio=?, marca=?, clave=?, descripcion=?, cantidad=?, proveedor=? WHERE id?");
+            ps = con.prepareStatement("UPDATE Administrar_Productos SET fecha=?, producto=?, precio=?, marca=?, clave=?, descripcion=?, cantidad=?, proveedor=? WHERE id?");
 
             ps.setDate(1, Date.valueOf(txtFecha.getText()));
             ps.setString(2, txtProducto.getText());
@@ -493,7 +504,7 @@ Connection con = null;
             ps.setString(5, txtClave.getText());
             ps.setString(6, txtDescripcion.getText());
             ps.setString(7, txtCantidad.getText());
-            ps.setString(8, txtProveedor.getText());
+            ps.setString(8, ComboPro.getSelectedItem().toString());
             ps.setString(9,txtID.getText());
 
             int res = ps.executeUpdate();
@@ -521,7 +532,7 @@ Connection con = null;
         try {
 
             con = getConection();
-            ps = con.prepareStatement("SELECT * FROM Entrada_Productos WHERE fecha = ?");
+            ps = con.prepareStatement("SELECT * FROM Administrar_Productos WHERE fecha = ?");
             ps.setDate(1, Date.valueOf(txtFecha.getText()));
 
             rs = (Resultset) ps.executeQuery();
@@ -557,7 +568,7 @@ Connection con = null;
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = (Connection) DriverManager.getConnection(URL, USERNAME, PASSWORD);
             con = getConnection();
-            ps = con.prepareStatement("INSERT INTO Entrada_Productos (fecha, producto, precio, marca, clave, descripcion, cantidad, proveedor) VALUES(?,?,?,?,?,?,?,?) ");
+            ps = con.prepareStatement("INSERT INTO Administrar_Productos (fecha, producto, precio, marca, clave, descripcion, cantidad, proveedor) VALUES(?,?,?,?,?,?,?,?) ");
 
             ps.setDate(1, Date.valueOf(txtFecha.getText()));
             ps.setString(2, txtProducto.getText());
@@ -566,7 +577,7 @@ Connection con = null;
             ps.setString(5, txtClave.getText());
             ps.setString(6, txtDescripcion.getText());
             ps.setString(7, txtCantidad.getText());
-            ps.setString(8, txtProveedor.getText());
+            ps.setString(8, ComboPro.getSelectedItem().toString());
 //            listaProductos.add(producto);
             actualizarTabla();
 
@@ -596,6 +607,10 @@ Connection con = null;
     private void txtClaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtClaveActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtClaveActionPerformed
+
+    private void ComboProActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComboProActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ComboProActionPerformed
     public void actualizarTabla() {
         while (modelo.getRowCount() > 0) {
             modelo.removeRow(0);
@@ -695,6 +710,7 @@ Connection con = null;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> ComboPro;
     public javax.swing.JTable TableList;
     private javax.swing.JButton btnActualizar;
     private javax.swing.JButton btnBorrar;
@@ -725,6 +741,5 @@ Connection con = null;
     private javax.swing.JTextField txtMarca;
     private javax.swing.JTextField txtPrecio;
     private javax.swing.JTextField txtProducto;
-    private javax.swing.JTextField txtProveedor;
     // End of variables declaration//GEN-END:variables
 }

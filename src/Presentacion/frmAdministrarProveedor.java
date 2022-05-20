@@ -268,12 +268,12 @@ public class frmAdministrarProveedor extends javax.swing.JFrame {
 
     private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
        Connection con = null;
-
+//com.mysql.cj.jdbc.Driver
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = (Connection) DriverManager.getConnection(URL, USERNAME, PASSWORD);
             con = getConnection();
-            ps = con.prepareStatement("INSERT INTO Proveedor (nombre, direccion, ciudad, telefono) VALUES(?,?,?,?) ");
+            ps = con.prepareStatement("INSERT INTO Administrar_Proveedor (nombre, direccion, ciudad, telefono) VALUES(?,?,?,?) ");
 
             ps.setString(1, txtNombre.getText());
             ps.setString(2, txtDireccion.getText());
@@ -313,7 +313,7 @@ public class frmAdministrarProveedor extends javax.swing.JFrame {
 
         try {
             con = getConnection();
-            ps = con.prepareStatement("DELETE FROM Proveedor WHERE nombre=? ");
+            ps = con.prepareStatement("DELETE FROM Administrar_Proveedor WHERE nombre=? ");
             ps.setString(1, txtNombre.getText());
             
 

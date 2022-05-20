@@ -167,7 +167,12 @@ public class frmEntrada extends javax.swing.JFrame {
             }
         });
 
-        ComboPove.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        ComboPove.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "LTH", "ACDelco", "" }));
+        ComboPove.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ComboPoveActionPerformed(evt);
+            }
+        });
 
         txtFecha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -409,6 +414,10 @@ public class frmEntrada extends javax.swing.JFrame {
             System.out.println(e);
         }
     }//GEN-LAST:event_btnEliminarActionPerformed
+
+    private void ComboPoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComboPoveActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ComboPoveActionPerformed
     public void actualizarTabla() {
         while (modelo.getRowCount() > 0) {
             modelo.removeRow(0);
